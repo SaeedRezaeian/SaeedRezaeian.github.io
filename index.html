@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saeed Rezaeian — Robotics &amp; Medical Device Engineer</title>
+  <meta name="description" content="Saeed Rezaeian — Ph.D. candidate in Mechanical Engineering at UC Riverside. Robotic systems for MRI-guided surgery, nitinol continuum robots, prosthetics control, and hands-on medical device R&D. Two U.S. patent filings, publications at IROS, RA-L, ISMR, and TMRB.">
+  <meta property="og:title" content="Saeed Rezaeian — Robotics &amp; Medical Device Engineer">
+  <meta property="og:description" content="Ph.D. candidate at UC Riverside building surgical robots, nitinol continuum devices, and instrumented test systems.">
+  <meta property="og:image" content="assets/img/portrait.jpg">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%235b3fa8'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='28' font-weight='bold' fill='white' text-anchor='middle'%3ESR%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="nav-name" href="#top">Saeed Rezaeian</a>
+    <div class="nav-links">
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#publications">Publications</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero wrap" id="top">
+  <div class="hero-grid">
+    <div>
+      <p class="kicker">Robotics · Medical Devices · Prototyping</p>
+      <h1>Saeed Rezaeian</h1>
+      <p class="tagline">Ph.D. Candidate, Mechanical Engineering — University of California, Riverside</p>
+      <p class="summary">I design, build, and validate robotic systems — from MRI-guided surgical robots and nitinol continuum devices to automated test stations. My work spans mechanical design, feedback control, kinematics, process development, and experimental validation, taking hardware from first concept to precise, reliable operation.</p>
+      <div class="links">
+        <a class="btn primary" href="mailto:sreza016@ucr.edu">Email me</a>
+        <a class="btn" href="https://www.linkedin.com/in/saeed-rezaeian-4484b2105/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="https://github.com/SaeedRezaeian" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="https://scholar.google.com/citations?hl=en&amp;user=dHZX4IYAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>8+ yrs</b><span>building robotic hardware</span></div>
+        <div class="stat"><b>7</b><span>peer-reviewed publications</span></div>
+        <div class="stat"><b>2</b><span>U.S. patent filings</span></div>
+        <div class="stat"><b>&lt;1 mm</b><span>tip positioning accuracy</span></div>
+      </div>
+    </div>
+    <img class="hero-photo" src="assets/img/portrait.jpg" alt="Portrait of Saeed Rezaeian">
+  </div>
+</header>
+
+<main>
+
+<!-- ============================ PROJECTS ============================ -->
+<section class="section wrap" id="projects">
+  <h2>Projects</h2>
+  <p class="lead">Selected research &amp; hardware</p>
+
+  <!-- Project 1: TTDNR -->
+  <article class="project">
+    <div class="p-body">
+      <h3>Dexterous Telescopic Tendon-Driven Needle Robot</h3>
+      <div class="chiprow">
+        <span class="chip">Nitinol</span><span class="chip">Series Elastic Actuation</span>
+        <span class="chip">Follow-the-Leader</span><span class="chip">Neurosurgery</span>
+      </div>
+      <p><b>Objective:</b> a meso-scale, multi-stage robotic needle capable of Follow-the-Leader (FTL) navigation to minimize tissue damage during neurosurgery.</p>
+      <p><b>Technology:</b> a concentric-tube manipulator built from notched superelastic nitinol tubes, driven by Series Elastic Actuators (SEAs) for precise force control.</p>
+      <p><b>Impact:</b> sub-millimeter precision with a tip position error of 0.92&nbsp;mm, and validated “S” and “C” shape maneuvers with ~1.1&nbsp;mm FTL tracking error.</p>
+      <p class="contrib"><b>My role:</b> mechanical design &amp; prototyping · software &amp; control · kinematic modeling and design constraints · experimental validation</p>
+      <div class="p-links">
+        <a class="btn" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11285092/" target="_blank" rel="noopener">Paper (IROS 2023)</a>
+        <a class="btn" href="https://github.com/SaeedRezaeian/TTDNR-Actuation" target="_blank" rel="noopener">Code</a>
+      </div>
+      <p class="note">Detailed CAD models and drawings available upon request.</p>
+    </div>
+    <div class="p-media">
+      <video controls preload="metadata" playsinline poster="assets/img/ttdnr-video-poster.jpg">
+        <source src="assets/video/ttdnr-iros2023.mp4" type="video/mp4">
+        Your browser does not support embedded video.
+      </video>
+      <div class="thumbrow">
+        <img src="assets/img/ttdnr-actuation-unit.jpg" alt="TTDNR actuation unit prototype with telescopic nitinol needle">
+        <img src="assets/img/ttdnr-workspace.jpg" alt="3D reachable workspace of the telescopic tendon-driven robot">
+      </div>
+    </div>
+  </article>
+
+  <!-- Project 2: MRI-guided delivery -->
+  <article class="project flip">
+    <div class="p-body">
+      <h3>MRI-Guided Robotic System for Intracranial Therapeutic Delivery</h3>
+      <div class="chiprow">
+        <span class="chip">MR-Compatible</span><span class="chip">Piezoelectric Actuation</span>
+        <span class="chip">Tendon-Driven</span><span class="chip">CAR-T Delivery</span>
+      </div>
+      <p><b>Objective:</b> a meso-scale robotic system for minimally invasive delivery of immunotherapy agents (e.g., CAR-T cells) into brain tumors.</p>
+      <p><b>Technology:</b> a tendon-driven telescopic needle robot using superelastic nitinol tubes and non-magnetic piezoelectric actuators.</p>
+      <p><b>Impact:</b> significant tumor coverage and high-precision steering validated under live 1.5T MRI guidance.</p>
+      <p class="contrib"><b>My role:</b> mechanical design &amp; prototyping · system integration · kinematics and mechanical modeling · characterization and validation tests</p>
+      <div class="p-links">
+        <a class="btn" href="https://www.techrxiv.org/doi/full/10.36227/techrxiv.172668600.08348575" target="_blank" rel="noopener">Paper (IEEE TMRB)</a>
+      </div>
+      <p class="note">Detailed CAD models and drawings available upon request.</p>
+    </div>
+    <div class="p-media">
+      <img src="assets/img/mri-robot-concept.jpg" alt="Concept: robotic needle reaching a brain tumor along multiple curved paths">
+      <img src="assets/img/mri-robot-renders.jpg" alt="CAD renders of the MR-compatible actuation unit, needle construction, and hydraulic injection system">
+    </div>
+  </article>
+
+  <!-- Project 3: SLITT -->
+  <article class="project">
+    <div class="p-body">
+      <h3>Steerable Laser Interstitial Thermotherapy (SLIT) Robot</h3>
+      <div class="chiprow">
+        <span class="chip">U.S. Patent</span><span class="chip">Hydraulic Actuation</span>
+        <span class="chip">Laser Ablation</span><span class="chip">Motion Planning</span>
+      </div>
+      <p><b>Objective:</b> an MR-compatible steerable robotic probe for laser interstitial thermal therapy (LITT), reaching large, irregular brain tumors that straight probes cannot.</p>
+      <p><b>Technology:</b> a 1.47&nbsp;mm superelastic nitinol steerable needle with hydraulic actuation; the tip integrates a custom PDMS/carbon-nanoparticle mixture that converts laser energy into localized thermal ablation, with an optimization algorithm that plans motion and ablation centers from MRI data.</p>
+      <p><b>Impact:</b> validated through FEA and in-vitro multi-site ablation tests, achieving consistent oval heating zones and sub-millimeter steering accuracy — while reducing required laser power from 14&nbsp;W to 0.7&nbsp;W.</p>
+      <p class="contrib"><b>My role:</b> mechanical design &amp; prototyping · motion planning &amp; optimization · system characterization and ablation testing</p>
+      <div class="p-links">
+        <a class="btn" href="https://ieeexplore.ieee.org/abstract/document/10586060" target="_blank" rel="noopener">Paper (ISMR 2024)</a>
+        <a class="btn" href="https://patents.google.com/patent/US20250107861A1/en" target="_blank" rel="noopener">U.S. Patent</a>
+        <a class="btn" href="https://github.com/SaeedRezaeian/Ablation-planning" target="_blank" rel="noopener">Code</a>
+      </div>
+      <p class="note">Detailed CAD models and drawings available upon request.</p>
+    </div>
+    <div class="p-media">
+      <img src="assets/img/slitt-probe-tip.jpg" alt="SLIT probe construction: notched nitinol needle, tendon wire, optical fiber, and PDMS/CNP ablation tip">
+      <img src="assets/img/slitt-ablation-tests.jpg" alt="In-vitro agar ablation tests showing consistent heating zones">
+    </div>
+  </article>
+
+  <!-- Project 4: Prosthesis -->
+  <article class="project flip">
+    <div class="p-body">
+      <h3>Control System Design for Lower-Limb Prostheses</h3>
+      <div class="chiprow">
+        <span class="chip">Impedance Control</span><span class="chip">sEMG</span>
+        <span class="chip">System Identification</span><span class="chip">Machine Learning</span>
+      </div>
+      <p><b>Objective:</b> AI-based locomotion-mode recognition from surface EMG for an ankle prosthesis controller, and impedance control of a knee prosthesis with frictional torque estimation.</p>
+      <p><b>Technology:</b> sEMG sensors on lower-limb muscles for gait-phase detection; a hierarchical impedance control scheme with fuzzy-logic friction compensation and least-squares system identification.</p>
+      <p><b>Impact:</b> reliable discrimination of walking speeds and ramp ascent for automatic gait-mode switching, reduced peak motor current during direction reversal, and significantly improved trajectory tracking by neutralizing internal friction.</p>
+      <p class="contrib"><b>My role:</b> data acquisition &amp; processing · machine-learning models · control system design · experimental validation</p>
+      <div class="p-links">
+        <a class="btn" href="https://ieeexplore.ieee.org/abstract/document/9663511" target="_blank" rel="noopener">Paper (locomotion ID)</a>
+        <a class="btn" href="https://ieeexplore.ieee.org/abstract/document/9071875" target="_blank" rel="noopener">Paper (impedance control)</a>
+      </div>
+    </div>
+    <div class="p-media">
+      <img src="assets/img/prosthesis-experiments.jpg" alt="Knee prosthesis test rig experiments with sEMG electrodes on the subject's leg">
+      <div class="thumbrow">
+        <img src="assets/img/prosthesis-control.jpg" alt="Hierarchical impedance control architecture diagram">
+        <img src="assets/img/prosthesis-results.jpg" alt="Experimental tracking results">
+      </div>
+    </div>
+  </article>
+
+  <!-- More research -->
+  <div class="cards3">
+    <div class="mini">
+      <h3>U-Arm Neurosurgical Platform</h3>
+      <p>Led the mechanical design of a fluorescence-guided neurosurgical platform — GD&amp;T and tolerance stack-up analysis, toleranced fabrication drawings, and transfer to a fully assembled machined-aluminum system with defined assembly procedures and inspection criteria.</p>
+      <span class="tag">U.S. patent (submitted, 2025)</span>
+    </div>
+    <div class="mini">
+      <h3>SURENA IV Humanoid Robot</h3>
+      <p>Dynamic modeling and validation of the wrist and ankle joints of a full-size humanoid using MSC ADAMS and ROS/Gazebo, including actuator selection and integration from torque and speed requirements.</p>
+      <span class="tag">CAST, University of Tehran</span>
+    </div>
+    <div class="mini">
+      <h3>Nitinol Process Development</h3>
+      <p>Developed and qualified fabrication processes for micro-scale nitinol components — EDM notching, shape-setting heat treatment, adhesive bonding — with automated load-cell and vision test stations characterizing force–curvature response across the full process window.</p>
+      <span class="tag">&lt;1 mm positioning accuracy</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ EXPERIENCE ============================ -->
+<section class="section wrap" id="experience">
+  <h2>Experience</h2>
+  <p class="lead">Where I've worked</p>
+  <div class="xp">
+    <div class="xp-item">
+      <h3>Lab Automation Intern</h3>
+      <div class="where">Dorna Robotics</div>
+      <div class="when">Jul 2026 – Sep 2026</div>
+      <p>Assembled, calibrated, and tested automated robotic lab systems; programmed multi-axis platforms for automated handling; designed CAD models, fixtures, and work-cell layouts; developed and executed validation and functional test protocols with equipment documentation.</p>
+    </div>
+    <div class="xp-item">
+      <h3>Graduate Research Assistant</h3>
+      <div class="where">Robotics and Medical Systems (RaMS) Lab, UC Riverside</div>
+      <div class="when">Sep 2021 – Oct 2026</div>
+      <p>Led mechanical development of MRI-guided surgical robots from concept through validated prototypes — nitinol process development, instrumented test stations, GD&amp;T and fabrication drawings, and clinical collaborations with Loma Linda University and City of Hope. Mentored two M.S. students and a high-school research team, resulting in two publications.</p>
+    </div>
+    <div class="xp-item">
+      <h3>Research Assistant</h3>
+      <div class="where">Center of Advanced Systems and Technologies (CAST), University of Tehran</div>
+      <div class="when">Feb 2017 – Jul 2021</div>
+      <p>Humanoid robot joint modeling (SURENA IV), instrumented test setups and system identification for prosthesis control, multi-sensor sEMG/IMU data acquisition pipelines, and experimental characterization of twisted-and-coiled actuators for self-sensing applications.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ PUBLICATIONS ============================ -->
+<section class="section wrap" id="publications">
+  <h2>Publications &amp; Patents</h2>
+  <p class="lead">Papers and IP</p>
+  <ol class="pubs">
+    <li><b>U-Arm Neurosurgical Platform</b>, <span class="venue">U.S. Patent, 2025 (submitted)</span></li>
+    <li><b>Identification of Nitinol Robotic Needles in MRI via Simulation-Driven Deep Learning</b>, <span class="venue">IEEE Int. Symposium on Medical Robotics (ISMR), 2026</span></li>
+    <li><b>Neurosurgical Robot for MRI-Guided Intracranial Therapeutic Delivery</b>, <span class="venue">IEEE Transactions on Medical Robotics and Bionics (TMRB), 2026</span> — <a class="plink" href="https://www.techrxiv.org/doi/full/10.36227/techrxiv.172668600.08348575" target="_blank" rel="noopener">preprint</a></li>
+    <li><b>Steerable Laser Ablation Therapy Robot</b>, <span class="venue">U.S. Patent, 2025</span> — <a class="plink" href="https://patents.google.com/patent/US20250107861A1/en" target="_blank" rel="noopener">patent</a></li>
+    <li><b>Towards a Steerable Neurosurgical Robot for Debulking of Brain Mass Lesions</b>, <span class="venue">IEEE Robotics and Automation Letters (RA-L), 2025</span></li>
+    <li><b>Towards a Robotic Steerable Laser Ablation Probe</b>, <span class="venue">IEEE Int. Symposium on Medical Robotics (ISMR), 2024</span> — <a class="plink" href="https://ieeexplore.ieee.org/abstract/document/10586060" target="_blank" rel="noopener">paper</a></li>
+    <li><b>A Telescopic Tendon-Driven Needle Robot for Minimally Invasive Neurosurgery</b>, <span class="venue">IEEE/RSJ Int. Conf. on Intelligent Robots and Systems (IROS), 2023</span> — <a class="plink" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11285092/" target="_blank" rel="noopener">paper</a></li>
+    <li><b>Identification of Locomotion Modes Based on Artificial Intelligence Algorithms Using Surface Electromyography Signals</b>, <span class="venue">2021</span> — <a class="plink" href="https://ieeexplore.ieee.org/abstract/document/9663511" target="_blank" rel="noopener">paper</a></li>
+    <li><b>Impedance Control of a Knee Prosthesis along with Considering a Frictional Torque Model Estimation</b>, <span class="venue">IEEE Int. Conf. on Robotics and Mechatronics (ICROM), 2019</span> — <a class="plink" href="https://ieeexplore.ieee.org/abstract/document/9071875" target="_blank" rel="noopener">paper</a></li>
+  </ol>
+</section>
+
+<!-- ============================ EDUCATION ============================ -->
+<section class="section wrap" id="education">
+  <h2>Education</h2>
+  <p class="lead">Academic background</p>
+  <div class="edu">
+    <div class="mini">
+      <b>University of California, Riverside</b>
+      <div class="deg">Ph.D., Mechanical Engineering</div>
+      <p>2021 – 2026 (expected) · GPA 4.0/4.0</p>
+    </div>
+    <div class="mini">
+      <b>University of Tehran</b>
+      <div class="deg">M.Sc., Mechanical Engineering</div>
+      <p>2018 – 2021 · GPA 4.0/4.0</p>
+    </div>
+    <div class="mini">
+      <b>University of Tehran</b>
+      <div class="deg">B.Sc., Mechanical Engineering</div>
+      <p>2014 – 2018 · GPA 3.9/4.0</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ SKILLS ============================ -->
+<section class="section wrap" id="skills">
+  <h2>Skills</h2>
+  <p class="lead">What I work with</p>
+  <div class="skills">
+    <div class="mini">
+      <h3>Mechanical &amp; Hardware</h3>
+      <ul>
+        <li>CAD — SolidWorks, CATIA</li>
+        <li>GD&amp;T and tolerance stack-up analysis</li>
+        <li>Design for manufacturability (DFM)</li>
+        <li>Mechanism &amp; fixture design</li>
+        <li>Rapid prototyping — 3D printing, CNC, EDM, laser cutting</li>
+        <li>Nitinol processing — EDM notching, shape setting</li>
+      </ul>
+    </div>
+    <div class="mini">
+      <h3>Controls &amp; Software</h3>
+      <ul>
+        <li>C++ and Python</li>
+        <li>MATLAB and LabVIEW</li>
+        <li>ROS / ROS2, MSC ADAMS</li>
+        <li>Control system design &amp; system identification</li>
+        <li>Microcontrollers and embedded I/O</li>
+        <li>Machine learning for signals &amp; imaging</li>
+      </ul>
+    </div>
+    <div class="mini">
+      <h3>Systems &amp; Testing</h3>
+      <ul>
+        <li>Sensor integration — load cells, FBG, encoders, IMU</li>
+        <li>Vision-based metrology &amp; inspection</li>
+        <li>Test method development &amp; validation protocols</li>
+        <li>Design of Experiments (DOE) &amp; statistical analysis</li>
+        <li>Data acquisition infrastructure</li>
+        <li>Hardware debugging &amp; root-cause analysis</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ HONORS ============================ -->
+<section class="section wrap honors" id="honors">
+  <h2>Honors &amp; Awards</h2>
+  <p class="lead">Recognition</p>
+  <ul>
+    <li>UC Riverside Dissertation Year Program Award <span>· 2025</span></li>
+    <li>Best Presentation Award, Mechanical Engineering Symposium, UC Riverside <span>· 2024</span></li>
+    <li>UC Riverside Dean's Distinguished Fellowship <span>· 2021</span></li>
+    <li>Iran's National Elites Foundation Scholarship <span>· 2019</span></li>
+    <li>Best Paper Award, IEEE ICRoM <span>· 2019</span></li>
+    <li>University of Tehran Foundation Scholarship <span>· 2017</span></li>
+  </ul>
+</section>
+
+</main>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="footer" id="contact">
+  <div class="wrap">
+    <h2>Get in touch</h2>
+    <p>I'm completing my Ph.D. in October 2026 and am open to R&amp;D roles in robotics and medical devices. If my work fits what your team is building, I'd love to talk.</p>
+    <div class="links">
+      <a class="btn primary" href="mailto:sreza016@ucr.edu">sreza016@ucr.edu</a>
+      <a class="btn" href="https://www.linkedin.com/in/saeed-rezaeian-4484b2105/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="https://github.com/SaeedRezaeian" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn" href="https://scholar.google.com/citations?hl=en&amp;user=dHZX4IYAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+    </div>
+    <p class="copy">© 2026 Saeed Rezaeian · Riverside, CA</p>
+  </div>
+</footer>
+
+</body>
+</html>
