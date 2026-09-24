@@ -107,7 +107,8 @@ section { scroll-margin-top: 78px; }
   .btn.primary:hover { color: #16141d; }
 }
 
-.stats { display: flex; gap: 28px; flex-wrap: wrap; margin-top: 30px; }
+.stats { display: grid; grid-template-columns: repeat(4, auto); justify-content: start; gap: 18px 26px; margin-top: 30px; }
+@media (max-width: 560px) { .stats { grid-template-columns: repeat(2, auto); } }
 .stat b { display: block; font-size: 22px; color: var(--text); }
 .stat span { color: var(--faint); font-size: 13.5px; }
 
@@ -145,8 +146,11 @@ section { scroll-margin-top: 78px; }
   background: #fff;
 }
 .thumbrow { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-.thumbrow img { object-fit: cover; width: 100%; height: 130px; }
+.thumbrow img { object-fit: contain; width: 100%; height: 150px; padding: 4px; }
+.p-media img { cursor: zoom-in; transition: border-color .15s ease; }
+.p-media img:hover, .p-media img:focus-visible { border-color: var(--accent); outline: none; }
 .note { color: var(--faint); font-size: 13px; margin-top: 8px; }
+.note.center { text-align: center; margin-top: 22px; }
 
 /* ---------- more research ---------- */
 .cards3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
@@ -185,6 +189,23 @@ section { scroll-margin-top: 78px; }
 }
 .pubs .venue { color: var(--muted); font-style: italic; }
 .pubs .plink { white-space: nowrap; font-size: 14px; font-weight: 600; }
+
+.pubgroup { font-size: 16px; margin: 26px 0 4px; color: var(--text); }
+.pubgroup:first-of-type { margin-top: 0; }
+
+/* ---------- lightbox ---------- */
+.lightbox {
+  position: fixed; inset: 0; z-index: 100; background: rgba(15, 13, 20, 0.88);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  padding: 40px 20px; cursor: zoom-out;
+}
+.lightbox[hidden] { display: none; }
+.lightbox img { max-width: min(1400px, 100%); max-height: 82vh; width: auto; border-radius: 10px; background: #fff; cursor: default; }
+.lb-cap { color: #ddd; font-size: 14px; margin: 14px 0 0; max-width: 70ch; text-align: center; }
+.lb-close {
+  position: absolute; top: 14px; right: 18px; background: none; border: 0;
+  color: #fff; font-size: 34px; line-height: 1; cursor: pointer;
+}
 
 /* ---------- education / skills / honors ---------- */
 .edu { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
