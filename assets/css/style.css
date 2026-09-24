@@ -107,7 +107,7 @@ section { scroll-margin-top: 78px; }
   .btn.primary:hover { color: #16141d; }
 }
 
-.stats { display: grid; grid-template-columns: repeat(4, auto); justify-content: start; gap: 18px 26px; margin-top: 30px; }
+.stats { display: grid; grid-template-columns: repeat(3, auto); justify-content: start; gap: 18px 26px; margin-top: 30px; }
 @media (max-width: 560px) { .stats { grid-template-columns: repeat(2, auto); } }
 .stat b { display: block; font-size: 22px; color: var(--text); }
 .stat span { color: var(--faint); font-size: 13.5px; }
@@ -154,6 +154,7 @@ section { scroll-margin-top: 78px; }
 
 /* ---------- more research ---------- */
 .cards3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.cards3.two { grid-template-columns: repeat(2, 1fr); }
 .mini {
   background: var(--surface); border: 1px solid var(--border);
   border-radius: var(--radius); padding: 22px; box-shadow: var(--shadow);
@@ -244,6 +245,6 @@ section { scroll-margin-top: 78px; }
   .hero-photo { justify-self: start; max-width: 260px; }
   .project { grid-template-columns: 1fr; }
   .project.flip .p-media { order: 0; }
-  .cards3, .edu, .skills { grid-template-columns: 1fr; }
+  .cards3, .cards3.two, .edu, .skills { grid-template-columns: 1fr; }
   .honors ul { columns: 1; }
 }
