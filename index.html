@@ -1,253 +1,336 @@
-/* ============================================================
-   Saeed Rezaeian — portfolio
-   Plain CSS, no dependencies. Light/dark via prefers-color-scheme.
-   ============================================================ */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saeed Rezaeian | Medical Robotics Engineer</title>
+  <meta name="description" content="Saeed Rezaeian, medical robotics engineer and Ph.D. candidate in Mechanical Engineering at UC Riverside. MRI-guided surgical robots, nitinol continuum devices, force and impedance control, and hands-on medical device R&amp;D. Two U.S. patent filings and peer-reviewed papers in IEEE TMRB, RA-L, IROS, and ISMR.">
+  <meta property="og:title" content="Saeed Rezaeian | Medical Robotics Engineer">
+  <meta property="og:description" content="Ph.D. candidate at UC Riverside building surgical robots, nitinol continuum devices, and instrumented test systems.">
+  <meta property="og:image" content="https://saeedrezaeian.github.io/assets/img/mri-robot-renders.jpg">
+  <meta property="og:url" content="https://saeedrezaeian.github.io/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://saeedrezaeian.github.io/">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%235b3fa8'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='28' font-weight='bold' fill='white' text-anchor='middle'%3ESR%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
 
-:root {
-  --bg: #fbfaf8;
-  --surface: #ffffff;
-  --text: #23212b;
-  --muted: #5f5b6b;
-  --faint: #8b8797;
-  --accent: #5b3fa8;
-  --accent-strong: #47318a;
-  --accent-soft: #efeaf9;
-  --border: #e6e2ee;
-  --shadow: 0 1px 2px rgba(35, 33, 43, 0.05), 0 8px 24px rgba(35, 33, 43, 0.06);
-  --radius: 14px;
-  --maxw: 1080px;
-}
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="nav-name" href="#top">Saeed Rezaeian</a>
+    <div class="nav-links">
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#publications">Publications</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #16141d;
-    --surface: #1e1b28;
-    --text: #eceaf2;
-    --muted: #b3aec4;
-    --faint: #837e94;
-    --accent: #a68df0;
-    --accent-strong: #c2aef8;
-    --accent-soft: #2a2440;
-    --border: #322d44;
-    --shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 10px 30px rgba(0, 0, 0, 0.35);
-  }
-}
+<header class="hero wrap" id="top">
+  <div class="hero-grid">
+    <div>
+      <p class="kicker">Medical Robotics · Surgical Devices · Prototyping</p>
+      <h1>Saeed Rezaeian</h1>
+      <p class="tagline">Ph.D. Candidate, Mechanical Engineering, University of California, Riverside</p>
+      <p class="summary">I build medical robots for minimally invasive neurosurgery: MRI-guided needle robots, steerable nitinol devices, and laser ablation probes. I take them from first concept to validated, sub-millimeter-accurate prototypes. My work spans mechanical design, kinematics and control, nitinol process development, and experimental validation, in close collaboration with neurosurgeons. I also completed an industry internship bringing up a 7-axis robotic workcell for lab automation.</p>
+      <div class="links">
+        <a class="btn primary" href="mailto:sreza016@ucr.edu">Email me</a>
+        <a class="btn" href="https://www.linkedin.com/in/saeed-rezaeian-4484b2105/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="https://github.com/SaeedRezaeian" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="https://scholar.google.com/citations?hl=en&amp;user=dHZX4IYAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+      </div>
+    </div>
+    <img class="hero-photo" src="assets/img/portrait.jpg" alt="Portrait of Saeed Rezaeian">
+  </div>
+</header>
 
-* { box-sizing: border-box; }
+<main>
 
-html { scroll-behavior: smooth; }
+<!-- ============================ PROJECTS ============================ -->
+<section class="section wrap" id="projects">
+  <h2>Projects</h2>
+  <p class="lead">Selected medical robotics research &amp; hardware</p>
 
-body {
-  margin: 0;
-  background: var(--bg);
-  color: var(--text);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  font-size: 16.5px;
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-}
+  <!-- Project 1: TTDNR -->
+  <article class="project">
+    <div class="p-body">
+      <h3>Dexterous Telescopic Tendon-Driven Needle Robot</h3>
+      <div class="chiprow">
+        <span class="chip">Nitinol</span><span class="chip">Series Elastic Actuation</span>
+        <span class="chip">Follow-the-Leader</span><span class="chip">Neurosurgery</span>
+      </div>
+      <p><b>Objective:</b> a meso-scale, multi-stage robotic needle capable of Follow-the-Leader (FTL) navigation to minimize tissue damage during neurosurgery.</p>
+      <p><b>Technology:</b> a 5-DOF needle built from three telescoping superelastic nitinol tubes with notched, tendon-steered tips, driven by Series Elastic Actuators (SEAs) with closed-loop force control written in C++.</p>
+      <p><b>Impact:</b> sub-millimeter precision with a tip position error of 0.92&nbsp;mm, and validated “S” and “C” shape maneuvers with ~1.1&nbsp;mm FTL tracking error.</p>
+      <p class="contrib"><b>My role:</b> mechanical design &amp; prototyping · actuation sizing and motor bring-up · force control software · kinematic modeling · nitinol fabrication and failure analysis · experimental validation</p>
+      <div class="p-links">
+        <a class="btn" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11285092/" target="_blank" rel="noopener">Paper (IROS 2023)</a>
+        <a class="btn" href="https://github.com/SaeedRezaeian/TTDNR-Actuation" target="_blank" rel="noopener">Code</a>
+      </div>
+    </div>
+    <div class="p-media">
+      <video controls preload="metadata" playsinline poster="assets/img/ttdnr-video-poster.jpg">
+        <source src="assets/video/ttdnr-iros2023.mp4" type="video/mp4">
+        Your browser does not support embedded video.
+      </video>
+      <div class="thumbrow">
+        <img loading="lazy" src="assets/img/ttdnr-actuation-unit.jpg" alt="TTDNR actuation unit prototype with telescopic nitinol needle">
+        <img loading="lazy" src="assets/img/ttdnr-workspace.jpg" alt="3D reachable workspace of the telescopic tendon-driven robot">
+      </div>
+    </div>
+  </article>
 
-img, video { max-width: 100%; height: auto; display: block; }
+  <!-- Project 2: MRI-guided delivery -->
+  <article class="project flip">
+    <div class="p-body">
+      <h3>MRI-Guided Robotic System for Intracranial Therapeutic Delivery</h3>
+      <div class="chiprow">
+        <span class="chip">MR-Compatible</span><span class="chip">Piezoelectric Actuation</span>
+        <span class="chip">Tendon-Driven</span><span class="chip">CAR-T Delivery</span>
+      </div>
+      <p><b>Objective:</b> a meso-scale robotic system for minimally invasive delivery of immunotherapy agents (e.g., CAR-T cells) into brain tumors.</p>
+      <p><b>Technology:</b> a tendon-driven telescopic needle robot using superelastic nitinol tubes, non-magnetic piezoelectric actuators, and a hydraulic injection module for delivery at multiple sites.</p>
+      <p><b>Impact:</b> accurate steering and better tumor coverage than a straight needle in brain-phantom experiments, validated under live 1.5&nbsp;T MRI guidance. Related work: a simulation-driven deep-learning method that locates the nitinol needle in MR images (ISMR 2026).</p>
+      <p class="contrib"><b>My role:</b> mechanical design &amp; prototyping · system integration · kinematics and mechanical modeling · characterization and validation tests</p>
+      <div class="p-links">
+        <a class="btn" href="https://doi.org/10.1109/TMRB.2026.3654255" target="_blank" rel="noopener">Paper (IEEE TMRB 2026)</a>
+      </div>
+    </div>
+    <div class="p-media">
+      <img loading="lazy" src="assets/img/mri-robot-concept.jpg" alt="Concept: robotic needle reaching a brain tumor along multiple curved paths">
+      <img loading="lazy" src="assets/img/mri-robot-renders.jpg" alt="CAD renders of the MR-compatible actuation unit, needle construction, and hydraulic injection system">
+    </div>
+  </article>
 
-a { color: var(--accent); text-decoration: none; }
-a:hover { color: var(--accent-strong); text-decoration: underline; }
+  <!-- Project 3: SLITT -->
+  <article class="project">
+    <div class="p-body">
+      <h3>Steerable Laser Interstitial Thermotherapy (SLITT) Robot</h3>
+      <div class="chiprow">
+        <span class="chip">U.S. Patent</span><span class="chip">Hydraulic Actuation</span>
+        <span class="chip">Laser Ablation</span><span class="chip">Motion Planning</span>
+      </div>
+      <p><b>Objective:</b> an MR-compatible steerable robotic probe for laser interstitial thermal therapy (LITT), reaching large, irregular brain tumors that straight probes cannot.</p>
+      <p><b>Technology:</b> a 1.47&nbsp;mm tendon-driven superelastic nitinol steerable needle with hydraulic actuation; the tip integrates a custom PDMS/carbon-nanoparticle mixture (imaged with SEM) that converts laser energy into localized thermal ablation, with an optimization algorithm that plans motion and ablation centers from MRI data.</p>
+      <p><b>Impact:</b> in-vitro multi-site ablation tests with fiber-optic (FBG) temperature sensing showed consistent oval heating zones and sub-millimeter steering accuracy. Systematic parametric studies cut the required laser power from 14&nbsp;W to 0.7&nbsp;W. Also tested with MR thermometry.</p>
+      <p class="contrib"><b>My role:</b> led development with neurosurgeons at Loma Linda University and City of Hope · mechanical design &amp; prototyping · motion planning &amp; optimization · system characterization and ablation testing</p>
+      <div class="p-links">
+        <a class="btn" href="https://ieeexplore.ieee.org/abstract/document/10586060" target="_blank" rel="noopener">Paper (ISMR 2024)</a>
+        <a class="btn" href="https://patents.google.com/patent/US20250107861A1/en" target="_blank" rel="noopener">U.S. Patent</a>
+        <a class="btn" href="https://github.com/SaeedRezaeian/Ablation-planning" target="_blank" rel="noopener">Code</a>
+      </div>
+    </div>
+    <div class="p-media">
+      <img loading="lazy" src="assets/img/slitt-probe-tip.jpg" alt="SLITT probe construction: notched nitinol needle, tendon wire, optical fiber, and PDMS/CNP ablation tip">
+      <img loading="lazy" src="assets/img/slitt-ablation-tests.jpg" alt="In-vitro agar ablation tests showing consistent heating zones">
+    </div>
+  </article>
 
-section { scroll-margin-top: 78px; }
+  <!-- Project 4: Prosthesis -->
+  <article class="project flip">
+    <div class="p-body">
+      <h3>Control System Design for Lower-Limb Prostheses</h3>
+      <div class="chiprow">
+        <span class="chip">Impedance Control</span><span class="chip">sEMG</span>
+        <span class="chip">System Identification</span><span class="chip">Machine Learning</span>
+      </div>
+      <p><b>Objective:</b> AI-based locomotion-mode recognition from surface EMG for an ankle prosthesis controller, and impedance control of a knee prosthesis with frictional torque estimation.</p>
+      <p><b>Technology:</b> sEMG sensors on lower-limb muscles for gait-phase detection; a hierarchical impedance control scheme with fuzzy-logic friction compensation and least-squares system identification.</p>
+      <p><b>Impact:</b> reliable discrimination of walking speeds and ramp ascent for automatic gait-mode switching, reduced peak motor current during direction reversal, and significantly improved trajectory tracking by neutralizing internal friction.</p>
+      <p class="contrib"><b>My role:</b> data acquisition &amp; processing · machine-learning models · control system design · experimental validation</p>
+      <div class="p-links">
+        <a class="btn" href="https://ieeexplore.ieee.org/abstract/document/9663511" target="_blank" rel="noopener">Paper (locomotion ID)</a>
+        <a class="btn" href="https://ieeexplore.ieee.org/abstract/document/9071875" target="_blank" rel="noopener">Paper (impedance control)</a>
+      </div>
+    </div>
+    <div class="p-media">
+      <img loading="lazy" src="assets/img/prosthesis-experiments.jpg" alt="Knee prosthesis test rig experiments with sEMG electrodes on the subject's leg">
+      <div class="thumbrow">
+        <img loading="lazy" src="assets/img/prosthesis-control.jpg" alt="Hierarchical impedance control architecture diagram">
+        <img loading="lazy" src="assets/img/prosthesis-results.jpg" alt="Experimental tracking results">
+      </div>
+    </div>
+  </article>
 
-.wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 22px; }
+  <!-- More research -->
+  <div class="cards3">
+    <div class="mini">
+      <h3>U-Arm Neurosurgical Platform</h3>
+      <p>Led the mechanical design of a fluorescence-guided neurosurgical platform: mechanical analysis, GD&amp;T and tolerance stack-up, released fabrication drawings, DFM with the machine shop, and assembly and inspection criteria for the machined-aluminum system.</p>
+      <span class="tag">U.S. patent (submitted, 2026)</span>
+    </div>
+    <div class="mini">
+      <h3>Robotic Catheter Test Platform</h3>
+      <p>Directed the design and build of a catheter test platform around an SLA-printed aorta phantom, with a standardized fixture and protocol for repeatable catheter navigation testing.</p>
+      <span class="tag">RaMS Lab, UC Riverside</span>
+    </div>
+    <div class="mini">
+      <h3>Humanoid Joint Modeling</h3>
+      <p>Dynamic modeling and validation of the wrist and ankle joints of a full-size humanoid using MSC ADAMS and ROS/Gazebo, including actuator selection and integration from torque and speed requirements.</p>
+      <span class="tag">SURENA IV · CAST, University of Tehran</span>
+    </div>
+  </div>
+  <p class="note center">Detailed CAD models and fabrication drawings for these projects are available on request.</p>
+</section>
 
-/* ---------- nav ---------- */
-.nav {
-  position: sticky; top: 0; z-index: 50;
-  background: color-mix(in srgb, var(--bg) 86%, transparent);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border);
-}
-.nav-inner {
-  display: flex; align-items: center; justify-content: space-between;
-  gap: 16px; padding: 12px 22px; max-width: var(--maxw); margin: 0 auto;
-}
-.nav-name { font-weight: 700; letter-spacing: 0.2px; color: var(--text); }
-.nav-name:hover { text-decoration: none; color: var(--accent); }
-.nav-links { display: flex; gap: 18px; flex-wrap: wrap; }
-.nav-links a { color: var(--muted); font-size: 14.5px; font-weight: 500; }
-.nav-links a:hover { color: var(--accent); text-decoration: none; }
+<!-- ============================ EXPERIENCE ============================ -->
+<section class="section wrap" id="experience">
+  <h2>Experience</h2>
+  <p class="lead">Where I've worked</p>
+  <div class="xp">
+    <div class="xp-item">
+      <h3>Ph.D. Researcher</h3>
+      <div class="where">Robotics and Medical Systems (RaMS) Lab, University of California, Riverside</div>
+      <div class="when">Sep 2021 – Dec 2026</div>
+      <p>Designed, built, and controlled MRI-guided surgical robots from concept through tested prototypes: mechanism design, actuation and closed-loop force control, nitinol fabrication and failure analysis, instrumented test fixtures, and GD&amp;T drawings, working with neurosurgeons at Loma Linda University and City of Hope. Mentored two M.S. students, whose projects both led to peer-reviewed papers, and a high-school research team.</p>
+    </div>
+    <div class="xp-item">
+      <h3>Robotics Engineering Intern</h3>
+      <div class="where">Dorna Robotics</div>
+      <div class="when">Jul 2026 – Sep 2026</div>
+      <p>Brought up a 7-axis robotic workcell (6-axis arm on a rail) for three automated laboratory workflows: hardware configuration, kinematics, and motion planning in Python, validated on live hardware. Built a collision and workspace model of 60 fixtures from measured geometry, three operator interfaces, and replay-based regression checks. Commissioned syringe pumps, a decapper, and a pH probe with dispense calibration.</p>
+    </div>
+    <div class="xp-item">
+      <h3>Robotics Research Assistant</h3>
+      <div class="where">Center of Advanced Systems and Technologies (CAST), University of Tehran</div>
+      <div class="when">Feb 2017 – Jul 2021</div>
+      <p>Designed and tuned an impedance controller with friction compensation for a powered knee prosthesis, modeled and validated joint dynamics for the SURENA IV humanoid, built sEMG and IMU data acquisition pipelines, and characterized twisted-and-coiled actuators for self-sensing applications.</p>
+    </div>
+  </div>
+</section>
 
-/* ---------- hero ---------- */
-.hero { padding-block: 64px 40px; }
-.hero-grid {
-  display: grid; grid-template-columns: 1.6fr 1fr;
-  gap: 44px; align-items: center;
-}
-.kicker {
-  color: var(--accent); font-weight: 700; font-size: 14px;
-  letter-spacing: 0.14em; text-transform: uppercase; margin: 0 0 10px;
-}
-.hero h1 { font-size: clamp(34px, 5vw, 50px); line-height: 1.08; margin: 0 0 14px; letter-spacing: -0.5px; }
-.hero .tagline { color: var(--muted); font-size: 19px; margin: 0 0 18px; }
-.hero .summary { color: var(--muted); margin: 0 0 24px; max-width: 58ch; }
-.hero-photo {
-  border-radius: 20px; box-shadow: var(--shadow);
-  border: 1px solid var(--border); overflow: hidden;
-  max-width: 330px; justify-self: end;
-}
-.links { display: flex; flex-wrap: wrap; gap: 10px; }
-.btn {
-  display: inline-flex; align-items: center; gap: 8px;
-  padding: 9px 16px; border-radius: 999px;
-  border: 1px solid var(--border); background: var(--surface);
-  color: var(--text); font-weight: 600; font-size: 14.5px;
-  transition: border-color .15s ease, transform .15s ease;
-}
-.btn:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; transform: translateY(-1px); }
-.btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
-.btn.primary:hover { background: var(--accent-strong); color: #fff; }
-@media (prefers-color-scheme: dark) {
-  .btn.primary { color: #16141d; }
-  .btn.primary:hover { color: #16141d; }
-}
+<!-- ============================ PUBLICATIONS ============================ -->
+<section class="section wrap" id="publications">
+  <h2>Publications &amp; Patents</h2>
+  <p class="lead">Peer-reviewed papers and patents</p>
+  <h3 class="pubgroup">Journal articles</h3>
+  <ol class="pubs">
+    <li><span class="ptitle">Minimally Invasive Neurosurgical Robot for MRI-Guided Intratumoral Therapeutic Delivery</span><br><span class="authors"><b class="me">S. Rezaeian</b>, H. Chen, C. Sidhu, B. Bartnik-Olson, B. Badie, J. Sheng</span><br><span class="venue">IEEE Transactions on Medical Robotics and Bionics (T-MRB), vol. 8, no. 1, pp. 219–231, 2026</span> · <a class="plink" href="https://doi.org/10.1109/TMRB.2026.3654255" target="_blank" rel="noopener">paper</a></li>
+    <li><span class="ptitle">Towards a Steerable Neurosurgical Robot for Debulking of Brain Mass Lesions</span><br><span class="authors">S. Saini, <b class="me">S. Rezaeian</b>, A. Akbari, B. Badie, J. Sheng</span><br><span class="venue">IEEE Robotics and Automation Letters (RA-L), vol. 10, no. 5, pp. 4690–4697, 2025</span> · <a class="plink" href="https://doi.org/10.1109/LRA.2025.3548352" target="_blank" rel="noopener">paper</a></li>
+  </ol>
+  <h3 class="pubgroup">Conference papers</h3>
+  <ol class="pubs" style="counter-reset: pub 2">
+    <li><span class="ptitle">Identification of Nitinol Robotic Needles in Magnetic Resonance Imaging via Simulation-Driven Deep Learning</span><br><span class="authors">H. Chen, B. Qi, <b class="me">S. Rezaeian</b>, A. Akbari, J. Langley, X. Hu, J. Sheng</span><br><span class="venue">IEEE International Symposium on Medical Robotics (ISMR), 2026</span></li>
+    <li><span class="ptitle">Towards a Robotically Steerable Laser Ablation Probe</span><br><span class="authors">J. A. Ceja, <b class="me">S. Rezaeian</b>, J. R. Vélez-Cordero, J. Hernández-Cordero, B. Badie, J. Sheng</span><br><span class="venue">IEEE International Symposium on Medical Robotics (ISMR), 2024, pp. 1–7</span> · <a class="plink" href="https://ieeexplore.ieee.org/abstract/document/10586060" target="_blank" rel="noopener">paper</a></li>
+    <li><span class="ptitle">A Telescopic Tendon-Driven Needle Robot for Minimally Invasive Neurosurgery</span><br><span class="authors"><b class="me">S. Rezaeian</b>, B. Badie, J. Sheng</span><br><span class="venue">IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), 2023, pp. 10301–10307</span> · <a class="plink" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11285092/" target="_blank" rel="noopener">paper</a></li>
+    <li><span class="ptitle">Identification of Locomotion Modes Based on Artificial Intelligence Algorithms Using Surface Electromyography Signals</span><br><span class="venue">2021</span> · <a class="plink" href="https://ieeexplore.ieee.org/abstract/document/9663511" target="_blank" rel="noopener">paper</a></li>
+    <li><span class="ptitle">Impedance Control of a Knee Prosthesis along with Considering a Frictional Torque Model Estimation</span><br><span class="venue">IEEE International Conference on Robotics and Mechatronics (ICROM), 2019</span> · <a class="plink" href="https://ieeexplore.ieee.org/abstract/document/9071875" target="_blank" rel="noopener">paper</a></li>
+  </ol>
+  <h3 class="pubgroup">Patents</h3>
+  <ol class="pubs" style="counter-reset: pub 7">
+    <li><span class="ptitle">U-Arm Neurosurgical Platform</span><br><span class="venue">U.S. Patent Application, 2026 (submitted)</span></li>
+    <li><span class="ptitle">Steerable Laser Ablation Therapy Robot</span><br><span class="authors">J. Sheng, <b class="me">S. Rezaeian</b></span><br><span class="venue">U.S. Patent Application Publication US 2025/0107861 A1, 2025</span> · <a class="plink" href="https://patents.google.com/patent/US20250107861A1/en" target="_blank" rel="noopener">patent</a></li>
+  </ol>
+</section>
 
-.stats { display: grid; grid-template-columns: repeat(3, auto); justify-content: start; gap: 18px 26px; margin-top: 30px; }
-@media (max-width: 560px) { .stats { grid-template-columns: repeat(2, auto); } }
-.stat b { display: block; font-size: 22px; color: var(--text); }
-.stat span { color: var(--faint); font-size: 13.5px; }
+<!-- ============================ EDUCATION ============================ -->
+<section class="section wrap" id="education">
+  <h2>Education</h2>
+  <p class="lead">Academic background</p>
+  <div class="edu">
+    <div class="mini">
+      <b>University of California, Riverside</b>
+      <div class="deg">Ph.D., Mechanical Engineering</div>
+      <p>2021 – Dec 2026 (expected) · GPA 4.0/4.0</p>
+    </div>
+    <div class="mini">
+      <b>University of Tehran</b>
+      <div class="deg">M.Sc., Mechanical Engineering</div>
+      <p>2018 – 2021 · GPA 4.0/4.0</p>
+    </div>
+    <div class="mini">
+      <b>University of Tehran</b>
+      <div class="deg">B.Sc., Mechanical Engineering</div>
+      <p>2014 – 2018 · GPA 3.9/4.0</p>
+    </div>
+  </div>
+</section>
 
-/* ---------- sections ---------- */
-.section { padding-block: 46px; }
-.section h2 {
-  font-size: 15px; letter-spacing: 0.16em; text-transform: uppercase;
-  color: var(--accent); margin: 0 0 6px; font-weight: 700;
-}
-.section .lead { font-size: 26px; font-weight: 700; margin: 0 0 26px; letter-spacing: -0.3px; }
+<!-- ============================ SKILLS ============================ -->
+<section class="section wrap" id="skills">
+  <h2>Skills</h2>
+  <p class="lead">What I work with</p>
+  <div class="skills">
+    <div class="mini">
+      <h3>Mechanical &amp; Hardware</h3>
+      <ul>
+        <li>CAD: SolidWorks, CATIA</li>
+        <li>GD&amp;T and tolerance stack-up analysis</li>
+        <li>Design for manufacturability (DFM)</li>
+        <li>Mechanism &amp; fixture design for surgical instruments</li>
+        <li>Actuation: DC motor sizing, piezoelectric, hydraulic</li>
+        <li>Prototyping: 3D printing, CNC machining, wire EDM, laser cutting</li>
+        <li>Nitinol fabrication: EDM notching, shape setting, bonding</li>
+      </ul>
+    </div>
+    <div class="mini">
+      <h3>Controls &amp; Software</h3>
+      <ul>
+        <li>C++, Python, MATLAB, Simulink, LabVIEW</li>
+        <li>Force and impedance control, friction compensation</li>
+        <li>Classical and modern control, system identification</li>
+        <li>Dynamic modeling and model validation</li>
+        <li>Kinematics and motion planning: continuum robots, 7-axis arms</li>
+        <li>ROS, Gazebo, MSC ADAMS</li>
+        <li>Deep learning and machine learning for imaging &amp; signals</li>
+      </ul>
+    </div>
+    <div class="mini">
+      <h3>Systems &amp; Testing</h3>
+      <ul>
+        <li>Sensor integration: load cells, FBG, encoders, IMU, cameras</li>
+        <li>Data acquisition: Sensoray DAQ, Arduino circuits, signal conditioning</li>
+        <li>Camera-based metrology &amp; inspection</li>
+        <li>Test methods, protocols, and reports</li>
+        <li>Systematic parametric studies &amp; statistical analysis</li>
+        <li>Root-cause and failure analysis</li>
+        <li>Robotic workcell bring-up and commissioning</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-/* ---------- projects ---------- */
-.project {
-  display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 34px;
-  background: var(--surface); border: 1px solid var(--border);
-  border-radius: var(--radius); padding: 30px; margin-bottom: 26px;
-  box-shadow: var(--shadow);
-}
-.project.flip .p-media { order: -1; }
-.project h3 { margin: 0 0 8px; font-size: 21.5px; line-height: 1.25; }
-.chiprow { display: flex; flex-wrap: wrap; gap: 7px; margin: 0 0 14px; }
-.chip {
-  background: var(--accent-soft); color: var(--accent-strong);
-  font-size: 12.5px; font-weight: 600; padding: 3.5px 10px; border-radius: 999px;
-}
-.p-body p { margin: 0 0 10px; color: var(--muted); font-size: 15.5px; }
-.p-body p b { color: var(--text); }
-.contrib { margin: 12px 0 14px; color: var(--faint); font-size: 13.5px; }
-.contrib b { color: var(--muted); font-weight: 600; }
-.p-links { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 4px; }
-.p-links .btn { font-size: 13.5px; padding: 7px 13px; }
-.p-media { display: flex; flex-direction: column; gap: 12px; min-width: 0; }
-.p-media img, .p-media video {
-  width: 100%; border-radius: 10px; border: 1px solid var(--border);
-  background: #fff;
-}
-.thumbrow { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-.thumbrow img { object-fit: contain; width: 100%; height: 150px; padding: 4px; }
-.p-media img { cursor: zoom-in; transition: border-color .15s ease; }
-.p-media img:hover, .p-media img:focus-visible { border-color: var(--accent); outline: none; }
-.note { color: var(--faint); font-size: 13px; margin-top: 8px; }
-.note.center { text-align: center; margin-top: 22px; }
+</main>
 
-/* ---------- more research ---------- */
-.cards3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-.cards3.two { grid-template-columns: repeat(2, 1fr); }
-.mini {
-  background: var(--surface); border: 1px solid var(--border);
-  border-radius: var(--radius); padding: 22px; box-shadow: var(--shadow);
-}
-.mini h3 { margin: 0 0 8px; font-size: 17px; }
-.mini p { margin: 0; color: var(--muted); font-size: 14.5px; }
-.mini .tag { display: inline-block; margin-top: 12px; color: var(--accent); font-size: 13px; font-weight: 600; }
+<!-- ============================ FOOTER ============================ -->
+<footer class="footer" id="contact">
+  <div class="wrap">
+    <h2>Get in touch</h2>
+    <p>I'm completing my Ph.D. in December 2026 and am available to start in January 2027. I'm open to R&amp;D and robotics engineering roles in medical devices and surgical robotics, as well as postdoctoral research positions. If my work fits what your team or lab is building, I'd love to talk.</p>
+    <div class="links">
+      <a class="btn primary" href="mailto:sreza016@ucr.edu">sreza016@ucr.edu</a>
+      <a class="btn" href="https://www.linkedin.com/in/saeed-rezaeian-4484b2105/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="https://github.com/SaeedRezaeian" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn" href="https://scholar.google.com/citations?hl=en&amp;user=dHZX4IYAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+    </div>
+    <p class="copy">© 2026 Saeed Rezaeian · Riverside, CA</p>
+  </div>
+</footer>
 
-/* ---------- experience ---------- */
-.xp { border-left: 2px solid var(--border); margin-left: 6px; padding-left: 26px; }
-.xp-item { position: relative; padding-bottom: 26px; }
-.xp-item:last-child { padding-bottom: 0; }
-.xp-item::before {
-  content: ""; position: absolute; left: -33px; top: 7px;
-  width: 12px; height: 12px; border-radius: 50%;
-  background: var(--accent); border: 3px solid var(--bg);
-}
-.xp-item h3 { margin: 0; font-size: 17.5px; }
-.xp-item .where { color: var(--muted); font-size: 15px; }
-.xp-item .when { color: var(--faint); font-size: 13.5px; margin: 2px 0 8px; }
-.xp-item p { margin: 0; color: var(--muted); font-size: 15px; }
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged image" hidden>
+  <button class="lb-close" aria-label="Close">×</button>
+  <img alt="">
+  <p class="lb-cap"></p>
+</div>
+<script>
+  (function () {
+    var lb = document.getElementById('lightbox'), img = lb.querySelector('img'), cap = lb.querySelector('.lb-cap');
+    document.querySelectorAll('.p-media img').forEach(function (el) {
+      el.tabIndex = 0;
+      function open() { img.src = el.src; img.alt = el.alt; cap.textContent = el.alt; lb.hidden = false; document.body.style.overflow = 'hidden'; }
+      el.addEventListener('click', open);
+      el.addEventListener('keydown', function (e) { if (e.key === 'Enter') open(); });
+    });
+    function close() { lb.hidden = true; img.src = ''; document.body.style.overflow = ''; }
+    lb.addEventListener('click', function (e) { if (e.target !== img) close(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !lb.hidden) close(); });
+  })();
+</script>
 
-/* ---------- publications ---------- */
-.pubs { list-style: none; counter-reset: pub; margin: 0; padding: 0; }
-.pubs li {
-  counter-increment: pub; position: relative;
-  padding: 12px 0 12px 52px; border-bottom: 1px solid var(--border);
-  font-size: 15.5px;
-}
-.pubs li::before {
-  content: "[" counter(pub) "]"; position: absolute; left: 0; top: 12px;
-  color: var(--accent); font-weight: 700; font-size: 14px;
-}
-.pubs .venue { color: var(--muted); font-style: italic; }
-.pubs .plink { white-space: nowrap; font-size: 14px; font-weight: 600; }
-
-.pubs .ptitle { font-weight: 600; color: var(--text); }
-.pubs .authors { color: var(--muted); font-size: 14px; }
-.pubs .me { color: var(--text); font-weight: 700; }
-.pubgroup { font-size: 16px; margin: 26px 0 4px; color: var(--text); }
-.pubgroup:first-of-type { margin-top: 0; }
-
-/* ---------- lightbox ---------- */
-.lightbox {
-  position: fixed; inset: 0; z-index: 100; background: rgba(15, 13, 20, 0.88);
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
-  padding: 40px 20px; cursor: zoom-out;
-}
-.lightbox[hidden] { display: none; }
-.lightbox img { max-width: min(1400px, 100%); max-height: 82vh; width: auto; border-radius: 10px; background: #fff; cursor: default; }
-.lb-cap { color: #ddd; font-size: 14px; margin: 14px 0 0; max-width: 70ch; text-align: center; }
-.lb-close {
-  position: absolute; top: 14px; right: 18px; background: none; border: 0;
-  color: #fff; font-size: 34px; line-height: 1; cursor: pointer;
-}
-
-/* ---------- education / skills / honors ---------- */
-.edu { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-.edu .mini b { font-size: 15.5px; }
-.edu .mini .deg { color: var(--text); font-weight: 700; margin: 2px 0; }
-
-.skills { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-.skills h3 { margin: 0 0 10px; font-size: 15.5px; color: var(--text); }
-.skills ul { margin: 0; padding: 0; list-style: none; }
-.skills li {
-  color: var(--muted); font-size: 14.5px; padding: 4.5px 0 4.5px 18px; position: relative;
-}
-.skills li::before { content: "▹"; position: absolute; left: 0; color: var(--accent); }
-
-.honors ul { margin: 0; padding: 0; list-style: none; columns: 2; column-gap: 40px; }
-.honors li {
-  color: var(--muted); font-size: 15px; padding: 6px 0 6px 20px;
-  position: relative; break-inside: avoid;
-}
-.honors li::before { content: "★"; position: absolute; left: 0; color: var(--accent); font-size: 12px; top: 9px; }
-.honors li span { color: var(--faint); font-size: 13px; }
-
-/* ---------- footer ---------- */
-.footer {
-  margin-top: 40px; border-top: 1px solid var(--border);
-  padding: 48px 0 56px; text-align: center;
-}
-.footer h2 { font-size: 26px; margin: 0 0 10px; }
-.footer p { color: var(--muted); margin: 0 auto 22px; max-width: 52ch; }
-.footer .links { justify-content: center; }
-.copy { color: var(--faint); font-size: 13px; margin-top: 34px; }
-
-/* ---------- responsive ---------- */
-@media (max-width: 900px) {
-  .hero-grid { grid-template-columns: 1fr; gap: 28px; }
-  .hero-photo { justify-self: start; max-width: 260px; }
-  .project { grid-template-columns: 1fr; }
-  .project.flip .p-media { order: 0; }
-  .cards3, .cards3.two, .edu, .skills { grid-template-columns: 1fr; }
-  .honors ul { columns: 1; }
-}
+</body>
+</html>
