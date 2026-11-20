@@ -191,6 +191,9 @@ section { scroll-margin-top: 78px; }
 .pubs .venue { color: var(--muted); font-style: italic; }
 .pubs .plink { white-space: nowrap; font-size: 14px; font-weight: 600; }
 
+.pubs .ptitle { font-weight: 600; color: var(--text); }
+.pubs .authors { color: var(--muted); font-size: 14px; }
+.pubs .me { color: var(--text); font-weight: 700; }
 .pubgroup { font-size: 16px; margin: 26px 0 4px; color: var(--text); }
 .pubgroup:first-of-type { margin-top: 0; }
 
